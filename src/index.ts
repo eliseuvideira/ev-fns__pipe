@@ -1,1 +1,4 @@
-export const identity = <T>(x: T) => x;
+import { pipeline } from "stream";
+import { promisify } from "util";
+
+export const pipe = promisify(pipeline);
